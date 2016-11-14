@@ -5,5 +5,10 @@
 # https://bugs.launchpad.net/snappy/+bug/1587675
 
 cmd="$1"
-shift
-stdbuf -oL $SNAP/usr/bin/python "$SNAP/usr/share/bcc/tools/$cmd" $@
+if [ `id -u` = 0 ] ; then
+	shift
+	stdbuf -oL $SNAP/usr/bin/python "$SNAP/usr/share/bcc/tools/$cmd" $@
+else
+	echo "Need to run $cmd as root (use sudo $@)"
+	exit 1
+fi
