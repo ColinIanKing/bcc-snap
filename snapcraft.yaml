@@ -27,6 +27,10 @@ apps:
         command: wrapper btrfsslower
     cachestat:
         command: wrapper cachestat
+    cachetop:
+        command: wrapper cachetop
+    cpudist:
+        command: wrapper cpudist
     dcsnoop:
         command: wrapper dcsnoop
     dcstat:
@@ -69,8 +73,12 @@ apps:
         command: wrapper pidpersec
     runqlat:
         command: wrapper runqlat
+    slabratetop:
+        command: wrapper slabratetop
     softirqs:
         command: wrapper softirqs
+    sslsniff:
+        command: wrapper sslsniff
     stackcount:
         command: wrapper stackcount
     stacksnoop:
@@ -85,8 +93,14 @@ apps:
         command: wrapper tcpconnect
     tcpconnlat:
         command: wrapper tcpconnlat
+    tcplife:
+        command: wrapper tcplife
     tcpretrans:
         command: wrapper tcpretrans
+    tcptop:
+        command: wrapper tcptop
+    ttysnoop:
+        command: wrapper ttysnop
     trace:
         command: wrapper trace
     vfscount:
